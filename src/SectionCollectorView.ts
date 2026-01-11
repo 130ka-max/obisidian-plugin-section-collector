@@ -444,6 +444,23 @@ export class SectionCollectorView extends ItemView {
     }
 
     /**
+     * セクションの最初の見出しを##に統一する
+     */
+    private normalizeHeadingLevel(content: string): string {
+        const lines = content.split('\n');
+        if (lines.length === 0) return content;
+
+        // 最初の行が見出しの場合、##に置き換え
+        const firstLine = lines[0];
+        const headingMatch = firstLine.match(/^(#{1,6})\s+(.+)$/);
+        if (headingMatch) {
+            lines[0] = `## ${headingMatch[2]}`;
+        }
+
+        return lines.join('\n');
+    }
+
+    /**
      * 検索結果をMDファイルにエクスポート
      */
     private async exportResults(): Promise<void> {
@@ -482,8 +499,9 @@ export class SectionCollectorView extends ItemView {
             const filePath = result.file.path.replace('.md', '');
             lines.push(`📄 [[${filePath}]]`);
             lines.push('');
-            // キーワードをハイライト形式に変換（==keyword==）
-            const highlightedContent = this.highlightKeywordForMarkdown(result.content, keyword);
+            // セクションの見出しを##に統一してからハイライト
+            const normalizedContent = this.normalizeHeadingLevel(result.content);
+            const highlightedContent = this.highlightKeywordForMarkdown(normalizedContent, keyword);
             lines.push(highlightedContent);
             lines.push('');
             lines.push('---');

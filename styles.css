@@ -1,0 +1,269 @@
+/* Section Collector Plugin Styles */
+
+.section-collector-container {
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.section-collector-header h4 {
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* 検索入力欄 */
+.section-collector-search {
+    margin-bottom: 10px;
+}
+
+.section-collector-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 5px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 14px;
+}
+
+.section-collector-input:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+/* 検索モードトグル */
+.section-collector-mode {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 8px 0;
+}
+
+.section-collector-mode-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* フォルダ選択 */
+.section-collector-folder-container {
+    margin-bottom: 10px;
+}
+
+.section-collector-folder-select {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 5px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.section-collector-folder-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.section-collector-folder-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.section-collector-folder-tag-remove {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+
+.section-collector-folder-tag-remove:hover {
+    opacity: 1;
+}
+
+/* 検索モードトグル */
+
+/* 結果コンテナ */
+.section-collector-results {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 結果アイテム */
+.section-collector-result-item {
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background: var(--background-primary);
+}
+
+.section-collector-result-item:hover {
+    border-color: var(--interactive-accent);
+    background: var(--background-secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ファイルヘッダー */
+.section-collector-file-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.section-collector-file-icon {
+    color: var(--text-muted);
+}
+
+.section-collector-file-path {
+    font-size: 12px;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* セクション内容 */
+.section-collector-section-content {
+    background: var(--background-secondary);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-collector-heading {
+    font-weight: 600;
+    color: var(--text-normal);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.section-collector-body {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* 全選択/解除コンテナ */
+.section-collector-select-all-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--background-modifier-border);
+    margin-bottom: 10px;
+}
+
+.section-collector-select-all-checkbox {
+    cursor: pointer;
+}
+
+.section-collector-select-all-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+/* アイテムチェックボックス */
+.section-collector-item-checkbox {
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+/* 結果なし */
+.section-collector-no-results {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* 結果カウントコンテナ */
+.section-collector-count-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--background-modifier-border);
+    margin-bottom: 10px;
+}
+
+.section-collector-count {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ボタンコンテナ（右揃え） */
+.section-collector-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* エクスポートボタン */
+.section-collector-export-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.section-collector-export-btn:hover {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+/* クリアボタン */
+.section-collector-clear-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.section-collector-clear-btn:hover {
+    background: var(--text-error);
+    color: white;
+    border-color: var(--text-error);
+}
+
+/* キーワードハイライト */
+.section-collector-highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* ダークモード対応 */
+.theme-dark .section-collector-highlight {
+    background-color: #ffd54f;
+    color: #000;
+}
